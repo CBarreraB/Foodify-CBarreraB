@@ -3,7 +3,7 @@ const {
   getRecipeById,
   getAllRecipes,
   getRecipeByName,
-} = require("../controllers/recipesControllers");
+} = require("../controllers/recipesControlers");
 
 const getRecipes = async (req, res) => {
   const { name } = req.query;
