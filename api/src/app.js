@@ -1,8 +1,8 @@
 const morgan = require("morgan");
 const express = require("express");
 const bodyParser = require("body-parser");
-const routes = require("./routes/mainRouter.js");
 const cookieParser = require("cookie-parser");
+const routes = require("./routes/mainRouter.js");
 
 require("./db.js");
 // Crear una instancia de la aplicación Express y se le asigna el nombre "API".
@@ -17,7 +17,7 @@ server.use(cookieParser());
 server.use(morgan("dev"));
 
 server.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*"); // actualice para que coincida con el dominio desde el que realizará la solicitud
+  res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // actualice para que coincida con el dominio desde el que realizará la solicitud
   res.header("Access-Control-Allow-Credentials", "true");
   res.header(
     "Access-Control-Allow-Headers",

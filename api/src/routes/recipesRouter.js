@@ -4,16 +4,16 @@ const { Router } = require("express");
 const recipesRouter = Router();
 const {
   getRecipes,
-  getRecipeById,
-  createRecipe,
+  getRecipe,
+  postRecipes,
 } = require("../handlers/recipesHandlers");
 
 //Solicitud GET a la ruta
 
 recipesRouter.get("/", getRecipes);
 
-recipesRouter.get("/:id", getRecipeById);
+recipesRouter.get("/:id", getRecipe);
 
-recipesRouter.post("/", createRecipe);
+recipesRouter.post("/recipes", postRecipes);
 
 module.exports = recipesRouter;
