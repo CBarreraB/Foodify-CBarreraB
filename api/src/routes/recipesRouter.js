@@ -5,15 +5,15 @@ const recipesRouter = Router();
 const {
   getRecipes,
   getRecipe,
-  postRecipes,
+  postRecipe,
 } = require("../handlers/recipesHandlers");
 
 //Solicitud GET a la ruta
 
-recipesRouter.get("/", getRecipes);
+recipesRouter.get("/recipe", getRecipes);
 
-recipesRouter.get("/:id", getRecipe);
+recipesRouter.get("/recipe/:idRecipe", getRecipe);
 
-recipesRouter.post("/recipes", postRecipes);
+recipesRouter.post("/recipes", postRecipe);
 
 module.exports = recipesRouter;

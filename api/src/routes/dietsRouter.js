@@ -6,6 +6,6 @@ const { getDiets } = require("../handlers/dietsHandlers");
 
 //Solicitud GET a la ruta
 
-dietsRouter.get("/", getDiets);
+dietsRouter.get("/diets", getDiets);
 
 module.exports = dietsRouter;
